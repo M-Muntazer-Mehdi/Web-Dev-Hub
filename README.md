@@ -113,25 +113,49 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.postimg.cc/d0ZhTZy9/por1.png" border="0" width="450" height="300">
+     <img src="https://i.postimg.cc/d0ZhTZy9/por1.png" border="0" width="400" height="250">
     </td>
     <td align="center">
-     <img src="https://i.postimg.cc/8k6xnphn/por2.png" border="0" width="450" height="300">
+     <img src="https://i.postimg.cc/8k6xnphn/por.png" border="0" width="400" height="250">
     </td>
   </tr>
 </table>
 
 ### 10. **Authentication Form**
 - **Description**: A form for handling user authentication processes.
-- **File Name**: `Authentication_Form.html`
+- **File**: [`Authentication_Form`](https://github.com/M-Muntazer-Mehdi/Web-Dev-Hub/tree/main/Authentication_Form)
+
+<table align="center">
+  <tr>
+    <td align="center">
+     <img src="https://i.postimg.cc/jdHM0C3C/auth.png" border="0" width="350" height="250">
+    </td>
+  </tr>
+</table>
 
 ### 11. **Records Table**
 - **Description**: A page that stores and displays records in a tabular format.
-- **File Name**: `Records_Table.html`
+- **File**: [`Records_Table`](https://github.com/M-Muntazer-Mehdi/Web-Dev-Hub/tree/main/Records_Management)
 
-### 12. **Stripe Checkout Integration**
-- **Description**: A page implementing Stripe API for handling purchasing details and ending the shopping process.
-- **File Name**: `Stripe_Checkout_Integration.html`
+<table align="center">
+  <tr>
+    <td align="center">
+     <img src="https://i.postimg.cc/KzzmCRPM/record.png" width="750" height="300">
+    </td>
+  </tr>
+</table>
+
+### 12. **Checkout Integration**
+- **Description**: A page implementing checkout API for handling purchasing details and ending the shopping process.
+- **File**: [`Checkout_Integration`](https://github.com/M-Muntazer-Mehdi/Web-Dev-Hub/tree/main/Checkout_Integration)
+
+<table align="center">
+  <tr>
+    <td align="center">
+     <img src="https://i.postimg.cc/wBtS8LtL/checkout.png" width="450" height="500">
+    </td>
+  </tr>
+</table>
 
 ## Getting Started
 
