@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+			width = 100%;
+			height = 100%;
+			background-color: black;
+			margin:0px;
+			}
+			
+			.Tutor{
+			   text-transform: uppercase;
+			  background-image: linear-gradient(
+				-225deg,
+				#231557 0%,
+				#FFFFFF 29%,
+				#ff1361 67%,
+				#fff800 100%
+			  );
+			  background-size: auto auto;
+			  background-clip: border-box;
+			  background-size: 200% auto;
+			  color: #fff;
+			  background-clip: text;
+			  text-fill-color: transparent;
+			  -webkit-background-clip: text;
+			  -webkit-text-fill-color: transparent;
+			  animation: textclip 2s linear infinite;
+			  display: inline-block;
+			  font-size: 35px;
+			  margin-top:20px;
+			  margin-left:330px;
+			  margin-right:345px;
+			}
+
+			@keyframes textclip {
+			  to {
+				background-position: 200% center;
+			  }
+			}
+			
+			.Clickon{
+			font-size:20px;
+			color: white;
+			margin-top:-30px;
+			margin-left:495px;
+			margin-right:495px;
+			}
+			
+			.result{
+			color:white;
+			margin-top:-505px;
+			text-align:center;
+			margin-right:130px;
+			font-size:25px;
+			box-sizing: border-box;
+			border: 2px solid rgba(225, 225, 225, 0.9);
+			border-radius: 8px;			
+			margin-left:230px;
+			box-shadow: 0 8px 16px 0 rgba(225, 225, 225, 0.2), 0 6px 20px 0 rgba(225, 225, 225, 0.5);
+			width:130px;
+			height:90px;
+			visibility:hidden;
+			}
+			
+			.resultvalue {
+			margin-top:-195px;
+			text-align:center;
+			font-size:15px;
+			border-radius: 8px;			
+			box-shadow: 0 8px 16px 0 rgba(225, 225, 225, 0.2), 0 6px 20px 0 rgba(225, 225, 225, 0.5);
+			display: none;
+			margin-left:1100px;
+			width:240px;
+			height:200px;
+			}
+			
+			TextArea {
+			  width: 40%;
+			  height: 100px;
+			  padding: 15px 20px 12px 20px;
+			  box-sizing: border-box;
+			  border: 2px solid rgba(225, 225, 225, 0.9);
+			  border-radius: 8px;
+			  background: rgba(255, 255, 255, 0.9);
+			  box-shadow: 0 8px 16px 0 rgba(225, 225, 225, 0.2), 0 6px 20px 0 rgba(225, 225, 225, 0.5);
+			  font-size: 16px;
+			  color: #122971;
+			  resize: none;
+			  -webkit-transition: 0.9s;
+			  transition: 0.9s;
+			  margin-top:0px;
+			  margin-left:390px;
+			  margin-right:390px;
+			  margin-bottom:30px;
+			}
+			
+			TextArea:focus {
+			  border: 15px solid rgba(225, 225, 225, 0.9);
+			  box-shadow: 0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5);
+			}
+			
+			::placeholder {
+			  color:#AE0D0D;
+			  opacity: 1; /* Firefox */
+			}
+			
+			.rectangle {
+			  margin-left:230px;
+			  margin-right:230px;
+			  margin-bottom:20px;
+			  height: 355px;
+			  width: 870px;
+			  background: rgba(255, 255, 255, 0.9);
+			  border-radius: 15px;
+			  box-shadow:7px 8px 1px #777;
+			}
+			
+			.Escape {
+			  display: inline-block;
+			  width: 50px;
+			  height: 35px;
+			  font-size: 12px;
+			  cursor: pointer;
+			  text-align: center;
+			  text-decoration: none;
+			  outline: none;
+			  color: black;
+			  background-color: white;
+			  border: none;
+			  border-radius: 5px;
+			  box-shadow:1px 5px 2px #999;
+			  margin-right: 20px;
+			  margin-left:20px;
+			  margin-top:10px;
+			}
+
+			.Escape:hover {
+			  color: white;
+			  background-color: #353535}
+
+			.Escape:active {
+			  color:white
+			  background-color:#353535;
+			  box-shadow:5px 2px 12px #999;
+			  transform: translateY(10px);
+			}
+			
+			.F1F4{
+			  display: inline-block;
+			  width: 50px;
+			  height: 35px;
+			  padding-right: 6px;
+			  padding-top: 2px;
+			  font-size:0.7em;
+			  text-align: right;
+			  cursor: pointer;
+			  text-decoration: none;
+			  outline: none;
+			  color: black;
+			  background-color: white;
+			  border: none;
+			  border-radius: 5px;
+			  box-shadow:1px 5px 2px #999;
+			  margin-left: 3px;
+			  margin-top:10px;
+			}
+
+			.F1F4:hover {
+			  color: white;
+			  background-color: #353535}
+
+			.F1F4:active{
+			  color:white
+			  background-color:#353535;
+			  box-shadow:5px 2px 12px #999;
+			  transform: translateY(10px);
+			}
+			
+			.uppercomma1{
+			margin-left: 20px;
+			}
+			
+			.num, .del, .QP, .AL, .enter, .ZM, .shiftr, .CTCT, .Key{
+			margin-left:5px;
+			}
+			
+			.num, .uppercomma1, .del, .tab1, .QP, .caps, .AL, .enter, .shift, .ZM, .shiftr, .CTCT, .Key{
+			  display: inline-block;
+			  width: 50px;
+			  height: 45px;
+			  font-size: 16px;
+			  cursor: pointer;
+			  text-align: center;
+			  text-decoration: none;
+			  outline: none;
+			  color: black;
+			  background-color: white;
+			  border: none;
+			  border-radius: 5px;
+			  box-shadow:1px 5px 2px #999;
+			  margin-top:10px;
+			}
+
+			.num:hover, .uppercomma1:hover , .del:hover, .tab1:hover, .QP:hover, 
+			.caps:hover, .AL:hover, .enter:hover, .shift:hover, .ZM:hover, .shiftr:hover,
+			.CTCT:hover, .Key:hover{
+			  color: white;
+			  background-color: #353535;
+			  }
+
+			.num:active, .uppercomma1:active, .del:active, .tab1:active, .QP:active,
+			.caps:active, .AL:active, .enter:active, .shift:active, .ZM:active, .shiftr:active,
+			.CTCT:active, .Key:active{
+			  color:white
+			  background-color:#353535;
+			  box-shadow:5px 2px 12px #999;
+			  transform: translateY(10px);
+			}
+			
+			.tab1 {
+			margin-left:20px;
+			width:62px;
+			font-size:12px;
+			padding-right:25px;
+			  padding-left: 0px;
+			  padding-top: 0px;
+			  padding-bottom:0px;
+			}
+			
+			.caps, .shift {
+			box-sizing: border-box;
+			margin-left:20px;
+			width:85px;
+			font-size: 12px;
+			padding-right:15px;
+			}
+			
+			.shift {
+			width:117px;
+			padding-right:60px;
+			}
+			
+			.del {
+			width:62px;
+			font-size:13px;
+			}
+			
+			.enter, .shiftr {
+			width:88px;
+			font-size:13px;
+			padding-top:5px;
+			padding-left:25px;
+			}
+			
+			.shiftr {
+			width:117px;
+			}
+			
+			.AL, .caps, .enter, .QP, .tab1, .shift, .ZM, .shiftr, .CTCT, .Key{
+			  line-height: 40%;
+			}
+			
+			.AL1, .QP1, .ZM1{
+			font-size:20px;
+			}
+			
+			.CTCT {
+			margin-left:5px;
+			width:50px;
+			height:55px;
+			font-size:12px;
+			padding-right:10px;
+			  padding-left: 0px;
+			  padding-top: 0px;
+			  padding-bottom:0px; 
+			}
+			
+			.CT1 {
+			margin-left:20px;
+			}
+
+			.SPACE {
+			width:290px;
+			}
+			
+			.Key {
+			font-size:12px;
+			height:22px;
+			}
+			
+			.sixth_line{
+			display:inline-block;
+			}
+			
+			.box{
+			display:flex;
+			flex-direction : row;
+			}
+			
+			.seven{
+			margin-left:10px;
+			display:inline-block;
+			}
+			
+			.HIDDEN{
+			visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+			<div class="Typing">
+				  <h3 class="Tutor">Learn to Type Fast Typing Tutor</h3>
+				  <h4 class="Clickon" id="Clickon" onclick="TypingTutorFunction(Clickon);">Click Here & Start Bonus Task Tutor</h4>				  
+			</div>
+			<div class="TextBox">
+				<textarea name="TextArea" id="TextArea" placeholder="Enter Text..."></textarea>
+			</div>
+				<!-- <h1 id="h1w" style="background-color:white">this button is press</h1> -->
+			<div class="rectangle">
+				<div class= "first_line">
+					<button class="Escape" id="Escape" onclick="audio.play(), AlphaKeyFunctions(Escape);" value="">Esc</button>
+					<button class="F1F4" id = "F1", onclick="audio.play(), AlphaKeyFunctions(F1);" value="">F1</button>
+					<button class="F1F4" id = "F2", onclick="audio.play(), AlphaKeyFunctions(F2);" value="">F2</button>
+					<button class="F1F4" id = "F3", onclick="audio.play(), AlphaKeyFunctions(F3);" value="">F3</button>
+					<button class="F1F4" id = "F4", onclick="audio.play(), AlphaKeyFunctions(F4);" value="">F4</button>
+					<button class="F1F4" id = "F5", onclick="audio.play(), AlphaKeyFunctions(F5);" value="">F5</button>
+					<button class="F1F4" id = "F6", onclick="audio.play(), AlphaKeyFunctions(F6);" value="">F6</button>
+					<button class="F1F4" id = "F7", onclick="audio.play(), AlphaKeyFunctions(F7);" value="">F7</button>
+					<button class="F1F4" id = "F8", onclick="audio.play(), AlphaKeyFunctions(F8);" value="">F8</button>
+					<button class="F1F4" id = "F9", onclick="audio.play(), AlphaKeyFunctions(F9);" value="">F9</button>
+					<button class="F1F4" id = "F10", onclick="audio.play(), AlphaKeyFunctions(F10);" value="">F10</button>
+					<button class="F1F4" id = "F11", onclick="audio.play(), AlphaKeyFunctions(F11);" value="">F11</button>
+					<button class="F1F4" id = "F12", onclick="audio.play(), AlphaKeyFunctions(F12);" value="">F12</button>
+					<button class="Escape", id="Backspace" onclick="audio.play(), AlphaKeyFunctions(Backspace);" value="">∆</button>
+				</div>
+				
+				<div class="second_line">
+					<button class="uppercomma1" id = "`", onclick="SymbolValueFunction('uppercomma1'), audio.play(), SymbolKeyFunctions('uppercomma1');">~<br>`</button>
+					<button class="num" id = "1", onclick="NumericValueFunction(1), audio.play(), NumKeyFunctions(1);";>!<br>1</button>
+					<button class="num" id = "2", onclick="NumericValueFunction(2), audio.play(), NumKeyFunctions(2);">@<br>2</button>
+					<button class="num" id = "3", onclick="NumericValueFunction(3), audio.play(), NumKeyFunctions(3);">#<br>3</button>
+					<button class="num" id = "4", onclick="NumericValueFunction(4), audio.play(), NumKeyFunctions(4);">$<br>4</button>
+					<button class="num" id = "5", onclick="NumericValueFunction(5), audio.play(), NumKeyFunctions(5);">%<br>5</button>
+					<button class="num" id = "6", onclick="NumericValueFunction(6), audio.play(), NumKeyFunctions(6);">^<br>6</button>
+					<button class="num" id = "7", onclick="NumericValueFunction(7), audio.play(), NumKeyFunctions(7);">&<br>7</button>
+					<button class="num" id = "8", onclick="NumericValueFunction(8), audio.play(), NumKeyFunctions(8);">*<br>8</button>
+					<button class="num" id = "9", onclick="NumericValueFunction(9), audio.play(), NumKeyFunctions(9);">(<br>9</button>
+					<button class="num" id = "0", onclick="NumericValueFunction(0), audio.play(), NumKeyFunctions(0);">)<br>0</button>
+					<button class="num dash" id = "-", onclick="SymbolValueFunction('dash'), audio.play(), SymbolKeyFunctions('dash');">_<br>-</button>
+					<button class="num plus" id = "=", onclick="SymbolValueFunction('plus'), audio.play(), SymbolKeyFunctions('plus');">+<br>=</button>
+					<button class="del" id = "Delete", onclick="audio.play(), AlphaKeyFunctions(Delete);"><br>Delete</button>
+				</div>
+				<div class="third_line">
+					<button class="tab1" id = "Tab", onclick="audio.play(), AlphaKeyFunctions(Tab);"><br>tab</button>
+					<button class="QP" id = "q", onclick="AlphaValueFunction(q), audio.play(), AlphaKeyFunctions(q);" value="q"><br>Q<br></button>
+					<button class="QP" id = "w", onclick="AlphaValueFunction(w), audio.play(), AlphaKeyFunctions(w);" value="w"><br>W<br></button>
+					<button class="QP" id = "e", onclick="AlphaValueFunction(e), audio.play(), AlphaKeyFunctions(e);" value="e"><br>E<br></button>
+					<button class="QP" id = "r", onclick="AlphaValueFunction(r), audio.play(), AlphaKeyFunctions(r);" value="r"><br>R<br></button>
+					<button class="QP" id = "t", onclick="AlphaValueFunction(t), audio.play(), AlphaKeyFunctions(t);" value="t"><br>T<br></button>
+					<button class="QP" id = "y", onclick="AlphaValueFunction(y), audio.play(), AlphaKeyFunctions(y);" value="y"><br>Y<br></button>
+					<button class="QP" id = "u", onclick="AlphaValueFunction(u), audio.play(), AlphaKeyFunctions(u);" value="u"><br>U<br></button>
+					<button class="QP" id = "i", onclick="AlphaValueFunction(i), audio.play(), AlphaKeyFunctions(i);" value="i"><br>I<br></button>
+					<button class="QP" id = "o", onclick="AlphaValueFunction(o), audio.play(), AlphaKeyFunctions(o);" value="o"><br>O<br></button>
+					<button class="QP" id = "p", onclick="AlphaValueFunction(p), audio.play(), AlphaKeyFunctions(p);" value="p"><br>P<br></button>
+					<button class="QP bracket_open" id = "[", onclick="SymbolValueFunction('bracket_open'), audio.play(), SymbolKeyFunctions('bracket_open');">[<br>&nbsp &nbsp &nbsp{</button>
+					<button class="QP QP1 bracket_close" id = "]", onclick="SymbolValueFunction('bracket_close'), audio.play(), SymbolKeyFunctions('bracket_close');">]<br>&nbsp &nbsp &nbsp}</button>
+					<button class="QP QP1 slash" id = "\", onclick="SymbolValueFunction('slash'), audio.play(), SymbolKeyFunctions('slash');">\<br>&nbsp &nbsp &nbsp|</button>
+				</div>
+				<div class="forth_line">
+					<button class="caps" id = "CapsLock", onclick="audio.play(), CapslockFunction(CapsLock);" value="q"><br>Caps Lock</button>
+					<button class="AL A" id = "a", onclick="AlphaValueFunction(a), audio.play(), AlphaKeyFunctions(a);" value="a"><br>A<br></button>
+					<button class="AL" id = "s", onclick="AlphaValueFunction(s), audio.play(), AlphaKeyFunctions(s);" value="s"><br>S<br></button>
+					<button class="AL" id = "d", onclick="AlphaValueFunction(d), audio.play(), AlphaKeyFunctions(d);" value="d"><br>D<br></button>
+					<button class="AL" id = "f", onclick="AlphaValueFunction(f), audio.play(), AlphaKeyFunctions(f);" value="f"><br>F<br></button>
+					<button class="AL" id = "g", onclick="AlphaValueFunction(g), audio.play(), AlphaKeyFunctions(g);" value="g"><br>G<br></button>
+					<button class="AL" id = "h", onclick="AlphaValueFunction(h), audio.play(), AlphaKeyFunctions(h);" value="h"><br>H<br></button>
+					<button class="AL" id = "j", onclick="AlphaValueFunction(j), audio.play(), AlphaKeyFunctions(j);" value="j"><br>J<br></button>
+					<button class="AL" id = "k", onclick="AlphaValueFunction(k), audio.play(), AlphaKeyFunctions(k);" value="k"><br>K<br></button>
+					<button class="AL" id = "l", onclick="AlphaValueFunction(l), audio.play(), AlphaKeyFunctions(l);" value="l"><br>L<br></button>
+					<button class="AL AL1 semi" id = ";", onclick="SymbolValueFunction('semi'), audio.play(), SymbolKeyFunctions('semi');">;<br>&nbsp &nbsp &nbsp:</button>
+					<button class="AL AL1 comma" id = "'", onclick="SymbolValueFunction('comma'), audio.play(), SymbolKeyFunctions('comma');">''<br>&nbsp &nbsp &nbsp'</button>
+					<button class="enter" id = "Enter", onclick="audio.play(), AlphaKeyFunctions(Enter);"><br>Enter</button>
+				</div>
+				<div class="fifth_line">
+					<button class="shift" id = "Shift", onclick="audio.play(), ShiftFunction(Shift);"><br>Shift</button>
+					<button class="ZM" id = "z", onclick="AlphaValueFunction(z), audio.play(), AlphaKeyFunctions(z);" value="z"><br>Z<br></button>
+					<button class="ZM" id = "x", onclick="AlphaValueFunction(x), audio.play(), AlphaKeyFunctions(x);" value="x"><br>X<br></button>
+					<button class="ZM" id = "c", onclick="AlphaValueFunction(c), audio.play(), AlphaKeyFunctions(c);" value="c"><br>C<br></button>
+					<button class="ZM" id = "v", onclick="AlphaValueFunction(v), audio.play(), AlphaKeyFunctions(v);" value="v"><br>V<br></button>
+					<button class="ZM" id = "b", onclick="AlphaValueFunction(b), audio.play(), AlphaKeyFunctions(b);" value="b"><br>B<br></button>
+					<button class="ZM" id = "n", onclick="AlphaValueFunction(n), audio.play(), AlphaKeyFunctions(n);" value="n"><br>N<br></button>
+					<button class="ZM" id = "m", onclick="AlphaValueFunction(m), audio.play(), AlphaKeyFunctions(m);" value="m"><br>M<br></button>
+					<button class="ZM ZM1 less" id = ",", onclick="SymbolValueFunction('less'), audio.play(), SymbolKeyFunctions('less');"><<br>&nbsp &nbsp &nbsp,</button>
+					<button class="ZM ZM1 greater" id = ".", onclick="SymbolValueFunction('greater'), audio.play(), SymbolKeyFunctions('greater');">><br>&nbsp &nbsp &nbsp.</button>
+					<button class="ZM ZM1 mark" id = "/", onclick="SymbolValueFunction('mark'), audio.play(), SymbolKeyFunctions('mark');">?<br>&nbsp &nbsp &nbsp/</button>
+					<button class="shiftr" id = "Shift1", onclick="audio.play();"><br>Shift</button>
+				</div>
+				<div class="box">
+					<div class="sixth_line">
+						<button class="CTCT CT1" id = "FuNction", onclick="audio.play(), AlphaKeyFunctions(FuNction);"><br>Fn</button>
+						<button class="CTCT" id = "Control", onclick="audio.play(), AlphaKeyFunctions(Control);"><br>Ctrl</button>
+						<button class="CTCT" id = "Alt", onclick="audio.play(), AlphaKeyFunctions(Alt);"><br>Alt</button>
+						<button class="CTCT" id = "Meta", onclick="audio.play(), AlphaKeyFunctions(Meta);"><br>Meta</button>
+						<button class="CTCT SPACE" id = " ", onclick="audio.play() , SymbolKeyFunctions('SPACE');"><br><br></button>
+						<button class="CTCT" id = "Control1", onclick="audio.play();"><br>Ctrl</button>
+						<button class="CTCT" id = "Alt1", onclick="audio.play();"><br>Alt</button>
+					</div>
+					<div class="seven">
+						<div>
+							<button class="Key HIDDEN" id = "", onclick="audio.play();">&nbsp&nbsp<br></button>
+							<button class="Key" id = "ArrowUp", onclick="audio.play();">^</button>
+							<button class="Key HIDDEN" id = "", onclick="audio.play();">&nbsp&nbsp<br></button>
+						</div>
+						<div>
+							<button class="Key" id = "ArrowLeft", onclick="audio.play();"><</button>
+							<button class="Key" id = "ArrowDown", onclick="audio.play();">v</button>
+							<button class="Key" id = "ArrowRight", onclick="audio.play();">></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class ="result" id="result">
+				<h4 class="time" id="time">Timer: 60</h4>
+			</div>
+			<div class ="resultvalue" id="resultvalue">
+				<h1 class="wph" id="wph">WPH: </h1>
+				<h3 class="accuracy" id="accuracy">Accuracy: </h3>
+				<h3 class="correct" id="correct">Correct Words: </h3>
+				<h3 class="wrong" id="wrong">Wrong Words: </h3>
+			</div>
+			
+			
+		<script type="text/javascript">
+			const audio = new Audio();
+			audio.src = "./click.mp3";
+		</script>
+		<script>
+		function TypingTutorFunction(field)
+		{
+			field.innerHTML = "If You have to [eat] 2 frog's, $Eat the ugliest one first.";
+			document.getElementById("Clickon").style.marginLeft = "430px";
+			document.getElementById("Clickon").style.marginRight = "430px";
+			timer();
+		}
+		function timer()
+		{
+			let seconds = 60;
+			document.getElementById("time").style.visibility="visible";
+			document.getElementById("time").style.color = "#CF1010";
+			document.getElementById("time").style.boxSizing = "borderbox";
+			document.getElementById("time").style.width= "120px";
+			document.getElementById("time").style.height= "60px";
+			document.getElementById("time").style.textAlign = "center";
+			document.getElementById("time").style.marginTop = "-4px";
+			document.getElementById("time").style.padding = "30px 5px 0px 5px";
+			document.getElementById("time").style.border= "2px solid rgba(225, 225, 225, 0.9)";
+			document.getElementById("time").style.borderRadius= "8px";
+			document.getElementById("time").style.boxShadow="0 2px 2px 0 rgba(225, 225, 225, 0.2), 0 2px 20px 0 rgba(225, 225, 225, 0.5)";	
+			const makeIteration = () => {
+			  if (seconds >= 0) {
+				document.getElementById("time").innerHTML = "Timer: " + seconds;
+				setTimeout(makeIteration, 1000);
+			  }
+			  seconds -= 1;
+			if(seconds == 0)
+			{
+				var x = document.getElementById("resultvalue");
+				x.style.display = "block";
+				document.getElementById("resultvalue").style.padding = "10px 0px 0px 0px";
+				document.getElementById("wph").style.color = "white";
+				document.getElementById("accuracy").style.color = "white";
+				document.getElementById("correct").style.color = "white";
+				document.getElementById("wrong").style.color = "white";
+				var var1 = document.getElementById("Clickon").innerHTML;
+				var var2 = document.getElementById("TextArea").value;
+				getDifference(var1, var2);
+			}
+			}
+			setTimeout(makeIteration, 1000);
+		}
+		function getDifference(a, b)
+		{
+        var i = 0;
+        var j = 0;
+        var result = "";
+        console.log("Missing Keywords are : ");
+        while (j < b.length)
+        {
+         if (a[i] != b[j] || i == a.length || b[i] != a[j])
+         {
+             result += b[j];
+         }
+         else
+             i++;
+         j++;
+        }
+		document.getElementById("accuracy").innerHTML = "Accuracy: " + parseFloat((result.length/a.length)*100).toFixed(2) + "%";	
+		document.getElementById("wph").innerHTML = "WPH: " + parseFloat((b.length/100)*60).toFixed(2);
+		document.getElementById("correct").innerHTML = "Wrong Words: " + (a.length-result.length);
+		document.getElementById("wrong").innerHTML = "Correct Words: " + (result.length);				
+        return result;
+		}
+		</script>
+		<script>
+			document.addEventListener("keydown", (event)=>{
+				var key1 = event.key;
+				if(key1 == "Escape" || key1 == "AudioVolumeMute" || key1 == "AudioVolumeDown" || key1 == "AudioVolumeUp"
+				|| key1 == "MediaTrackPrevious" || key1 == "MediaPlayPause" || key1 == "F7" || key1 == "Meta"
+				|| key1 == "F10")
+				{
+					audio.play();
+					alert(key1 + " key is pressed");
+					audio.play();					
+				}
+				else{
+					<!-- document.querySelector("h1").innerHTML = "You press " + event.key; -->
+					document.getElementById(key1).style.transform = "translateY(10px)";
+					document.getElementById(key1).style.color = "white";
+					document.getElementById(key1).style.background= "#353535";
+					document.getElementById(key1).style.boxShadow = "5px 2px 12px #999";
+					audio.play();
+				}
+			})
+			document.addEventListener("keyup", (event)=>{
+				var key1 = event.key;
+				document.getElementById(key1).style.transform = "translateY(0px)";
+				document.getElementById(key1).style.color = "black";
+				document.getElementById(key1).style.background= "white";
+				document.getElementById(key1).style.boxShadow = "1px 5px 2px #999";
+			})
+		</script>
+		<script>
+			var random = "";
+			function AlphaKeyFunctions(field)
+			{
+				var key1 = field.innerHTML;
+				<!-- alert(key1); -->
+				if(key1 == "Esc" || key1 == "F1" || key1 == "F2" || key1 == "F3" || key1 == "F4" || key1 == "F5"
+				|| key1 == "F6" || key1 == "F7" || key1 == "F8" || key1 == "F9" || key1 == "F10" || key1 == "F11"
+				|| key1 == "F12" || key1 == "<br>Fn" || key1 == "<br>Ctrl" || key1 == "<br>Alt" || key1 == "<br>Meta")
+				{
+					alert(key1 + " key is pressed");
+				}
+				else
+				{
+					if(key1 == "∆")
+					{
+						random = random+field.innerHTML;
+					    random = random.substr(0,random.length-2);
+						document.getElementById("TextArea").value = random;
+						document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+						document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";
+					}
+					else if(key1 == "<br>tab")
+					{
+						random = random+field.innerHTML;
+						random = random.substr(0,random.length-7)+"	";
+						document.getElementById("TextArea").value = random;
+						document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+						document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";
+					}
+					else if(key1 == "<br>Delete")
+					{
+						random =  "";
+						document.getElementById("TextArea").value = random;
+						document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+						document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";
+					}
+					else if(key1 == "<br>Enter")
+					{
+						random = random+field.innerHTML;
+						random = random.substr(0,random.length-9)+"\n";
+						document.getElementById("TextArea").value = random;
+						document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+						document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";
+					}
+					else
+					{
+						if(capslock == 1)
+						{
+							var random1 = "";
+							random1 = field.innerHTML;	
+							random1 = random1.substr(0,random1.length-4);	
+							random1 = random1.substr(4,random1.length-4);
+							random = random+random1;
+							document.getElementById("TextArea").value = random;
+							document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+							document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";								
+						}
+						else
+						{
+							random = random+field.value;
+							document.getElementById("TextArea").value = random;
+							document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+							document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";						
+						}
+					}
+				}
+			}
+			function NumKeyFunctions(field)
+			{
+				<!-- random = random+document.getElementById(field).innerHTML; -->
+				random = random+document.getElementById(field).value;
+				document.getElementById("TextArea").value = random;
+				document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+				document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";
+			}
+			function SymbolKeyFunctions(field)
+			{
+				if(field == "SPACE")
+				{
+					const collection = document.getElementsByClassName(field);
+					random = random+collection[0].innerHTMLs;
+					random = random.substr(0,random.length-9)+" ";
+					document.getElementById("TextArea").value = random;
+					document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+					document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";
+				}
+				else
+				{
+					const collection = document.getElementsByClassName(field);
+					random = random+collection[0].value;
+					document.getElementById("TextArea").value = random;
+					document.getElementById("TextArea").style.border="15px solid rgba(225, 225, 225, 0.9)";
+					document.getElementById("TextArea").style.boxShadow="0 8px 16px 0 rgba(235, 14, 14, 0.2), 0 6px 20px 0 rgba(235, 14, 14, 0.5)";
+				}
+			}
+			var capslock = 0;
+			var shift = 0;
+			function ShiftFunction(field)
+			{
+				var check1 = field.innerHTML;
+				if(check1 == "<br>Shift")
+				{
+					if(shift == 0)
+					{
+						shift = 1;
+						alert("Shift Key is ON!");
+					}
+					else if (shift == 1)
+					{
+						shift = 0;
+						alert("Shift Key is OFF!");
+					}						
+				}				
+			}
+			function CapslockFunction(field)
+			{
+				var check1 = field.innerHTML;
+				if(check1 == "<br>Caps Lock")
+				{
+					if(capslock == 0)
+					{
+						   capslock = 1;
+						   alert("capslock is ON");
+					}
+					else if (capslock == 1)
+					{
+						 capslock = 0;
+						 alert("capslock is OFF");
+					}
+				}
+			}
+			function NumericValueFunction(field)
+			{
+				var random1 = "";
+				if(shift == 1)
+				{
+					random1 = random1+document.getElementById(field).innerHTML;
+					if(random1 == "&amp;<br>7")
+					{
+						random1 = random1.substr(0,random1.length-9);
+						document.getElementById(field).value = random1;
+					}
+					else
+					{
+						random1 = random1.substr(0,random1.length-5);
+						document.getElementById(field).value = random1;
+					}
+				}
+				else
+				{
+					random1 = random1+document.getElementById(field).innerHTML;	
+					if(random1 == "&amp;<br>7")
+					{
+						random1 = random1.substr(9,random1.length-5);
+						document.getElementById(field).value = random1;	
+					}
+					else
+					{
+						random1 = random1.substr(5,random1.length-5);
+						document.getElementById(field).value = random1;	
+					}
+				}
+			}
+			function SymbolValueFunction(field)
+			{
+					var random1 = "";
+					if(shift == 1)
+					{
+							const collection = document.getElementsByClassName(field);
+							random1 = random1+collection[0].innerHTML;
+						if(random1 == "\<br>&nbsp; &nbsp; &nbsp;|" || random1 == "''<br>&nbsp; &nbsp; &nbsp;'" || random1 == ";<br>&nbsp; &nbsp; &nbsp;:" || 
+						random1 == "[<br>&nbsp; &nbsp; &nbsp;{" || random1 == "]<br>&nbsp; &nbsp; &nbsp;}" || random1 == "?<br>&nbsp; &nbsp; &nbsp;/")
+						{
+							random1 = random1.substr(0,random1.length-25);
+							collection[0].value = random1;
+						}
+						else if(random1 == "&lt;<br>&nbsp; &nbsp; &nbsp;,")
+						{
+							random1 = "<";
+							collection[0].value = random1;						
+						}
+						else if(random1 == "&gt;<br>&nbsp; &nbsp; &nbsp;.")
+						{
+							random1 = ">";
+							collection[0].value = random1;							
+						}
+						else
+						{
+							random1 = random1.substr(0,random1.length-5);
+							collection[0].value = random1;					
+						}
+					}
+					else
+					{
+							const collection = document.getElementsByClassName(field);
+							random1 = random1+collection[0].innerHTML;				
+						if(random1 == "\<br>&nbsp; &nbsp; &nbsp;|" || random1 == "''<br>&nbsp; &nbsp; &nbsp;'" || random1 == ";<br>&nbsp; &nbsp; &nbsp;:" || 
+						random1 == "[<br>&nbsp; &nbsp; &nbsp;{" || random1 == "]<br>&nbsp; &nbsp; &nbsp;}" || random1 == "?<br>&nbsp; &nbsp; &nbsp;/")
+						{
+							random1 = random1.substr(25,random1.length-5);
+							collection[0].value = random1;	
+						}
+						else if(random1 == "&lt;<br>&nbsp; &nbsp; &nbsp;," || random1 == "&gt;<br>&nbsp; &nbsp; &nbsp;.")
+						{
+							random1 = random1.substr(28,random1.length-5);
+							collection[0].value = random1;							
+						}
+						else
+						{				
+							random1 = random1.substr(5,random1.length-5);
+							collection[0].value = random1;
+						}
+					}
+			}
+			function AlphaValueFunction(field)
+			{
+				var random1 = "";
+				if(capslock == 0)
+				{
+					random1 = field.value;
+					field.value = random1;
+				}			
+			}
+		</script>
+	</body>
+</html>

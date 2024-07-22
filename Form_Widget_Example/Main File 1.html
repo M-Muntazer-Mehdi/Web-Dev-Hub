@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title>20F-1023</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-duallistbox/3.0.6/bootstrap-duallistbox.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap3/bootstrap-switch.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.4.0/css/bootstrap-colorpicker.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+</head>
+<body style="background-color:#00FFFF">
+
+  <div class="container mt-5" >
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <form>
+          <h1 class="mb-4">Patient Registration Form</h1>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" placeholder="Enter date of birth">
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender">
+              <option value="">Select gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="symptoms">Symptoms</label>
+            <select class="form-control select2" id="symptoms" multiple>
+              <option value="">Select symptoms</option>
+              <option value="fever">Fever</option>
+              <option value="cough">Cough</option>
+              <option value=          "headache">Headache</option>
+          <option value="fatigue">Fatigue</option>
+          <option value="loss_of_taste">Loss of taste/smell</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="medications">Current Medications</label>
+        <select class="form-control" id="medications" multiple>
+          <option value="">Select medications</option>
+          <option value="aspirin">Aspirin</option>
+          <option value="ibuprofen">Ibuprofen</option>
+          <option value="acetaminophen">Acetaminophen</option>
+          <option value="naproxen">Naproxen</option>
+          <option value="tramadol">Tramadol</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="allergies">Allergies</label>
+        <select class="form-control" id="allergies" multiple>
+          <option value="">Select allergies</option>
+          <option value="peanuts">Peanuts</option>
+          <option value="shellfish">Shellfish</option>
+          <option value="dairy">Dairy</option>
+          <option value="soy">Soy</option>
+          <option value="gluten">Gluten</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="timeslot">Preferred Time Slot</label>
+        <input type="text" class="form-control datetimepicker-input" id="timeslot" data-toggle="datetimepicker" data-target="#timeslot" placeholder="Select preferred time slot">
+      </div>
+      <div class="form-group">
+        <label for="daterange">Date Range</label>
+        <input type="text" class="form-control daterange" id="daterange" placeholder="Select date range">
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="checkbox" class="bootstrap-switch" id="status">
+      </div>
+      <div class="form-group">
+        <label for="color">Color</label>
+        <div class="input-group colorpicker-component">
+          <input type="text" class="form-control" id="color1" placeholder="Select color">
+          <span class="input-group-addon"><i></i></span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+</div>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-duallistbox/3.0.6/jquery.bootstrap-duallistbox.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17./js/bootstrap-datetimepicker.min.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.4.0/js/bootstrap-colorpicker.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Initialize Select2
+      $('#symptoms').select2();
+
+      // Initialize Duallistbox
+      $('#medications').bootstrapDualListbox();
+
+      // Initialize Date and time Picker
+      $('#timeslot').datetimepicker({
+        format: 'LT'
+      });
+
+      // Initialize Date Range Picker
+      $('#daterange').daterangepicker();
+
+      // Initialize Bootstrap Switch
+      $('#status').bootstrapSwitch();
+
+      // Initialize Color Picker
+      $('#color1').colorpicker().on('changeColor', function(ev) {
+      $('body').css('background-color', ev.color.toHex());
+    });
+    });
+  </script>
+</body>
+</html>
+

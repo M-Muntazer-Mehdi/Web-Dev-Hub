@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="Blinking_Font.css">
+		<style>
+			body{
+			background:black;
+			}
+			
+			.main_div {
+			margin-left:530px;
+			}
+			
+			.first_line, .second_line{
+			border-style: none none solid none;
+			width:280px;
+			border-color: white;
+			}
+			
+			.num{
+			margin-left:5px;
+			width:80px;
+			height:80px;
+			font-size:40px;
+			background: transparent;
+			color:white;
+			text-shadow: 3px 2px 5px #999;
+			}
+			
+			.N1, .N4, .N7{
+			border-style: none solid none none;
+			border-right-color: white;
+			}
+			
+			.N3, .N6, .N9{
+			border-style: none none none solid;
+			border-color: white;
+			}
+			
+			.Name_div{
+			margin-top:190px;
+			margin-left:405px;
+			}
+			
+			.X, .print{
+			color: white;
+			}
+			
+			.print{
+			margin-top:-160px;
+			margin-bottom:-110px;
+			font-size:50px;
+			animation: glitch 1s linear infinite;
+			}
+
+			@keyframes glitch{
+			  2%,64%{
+				transform: translate(2px,0) skew(0deg);
+			  }
+			  4%,60%{
+				transform: translate(-2px,0) skew(0deg);
+			  }
+			  62%{
+				transform: translate(0,0) skew(5deg); 
+			  }
+			}
+		
+			  h3 {
+				grid-column: 1;
+				color: #067B89;
+				font-size:30px;
+				display:inline-block;
+				margin-left:40px;
+				text-transform: uppercase;
+				animation: glow 2s ease-in-out infinite alternate;
+			  }
+			  
+				@keyframes glow {
+				from {
+				  text-shadow: 0 0 20px #067B89;
+				}
+				to {
+				  text-shadow: 0 0 30px #067B89, 0 0 10px #067B89;
+				}
+			  }
+			  
+				div.center {
+				margin-top:-410px;
+				margin-right:50px;
+				visibility:hidden;
+				text-align: right;
+				}
+			
+		</style>
+	</head>
+	<body>
+	
+	    <div class="sign">
+			<span class="fast-flicker">Tic</span>Tac<span class="flicker">Toe</span>
+		</div>
+		
+		<div class="main_div">
+			<div class= "first_line">
+				<button class="num N1" id="N1" onclick="audio.play(), AssignValues(N1);" value="">-</button>
+				<button class="num N2" id="N2" onclick="audio.play(), AssignValues(N2);" value="">-</button>
+				<button class="num N3" id="N3" onclick="audio.play(), AssignValues(N3);" value="">-</button>
+			</div>
+			<div class= "second_line">
+				<button class="num N4" id="N4" onclick="audio.play(), AssignValues(N4);" value="">-</button>
+				<button class="num N5" id="N5" onclick="audio.play(), AssignValues(N5);" value="">-</button>
+				<button class="num N6" id="N6" onclick="audio.play(), AssignValues(N6);" value="">-</button>
+			</div>
+			<div class= "third_line">
+				<button class="num N7" id="N7" onclick="audio.play(), AssignValues(N7);" value="">-</button>
+				<button class="num N8" id="N8" onclick="audio.play(), AssignValues(N8);" value="">-</button>
+				<button class="num N9" id="N9" onclick="audio.play(), AssignValues(N9);" value="">-</button>
+			</div>
+		</div>
+		
+		<div class="message">
+			<h6 class="print" id = "p1"></h6>
+		</div>
+		
+		<div class = "Name_div">
+			<h3 class="Players"> Player1 ( <span class="X">X</span> )</h3>
+			<h3 class="Players"> Player2 ( <span class="X">O</span> )</h3>
+		</div>
+		
+		<div class="center">	
+			<video id="video1" width="420" height="340">
+			  <source src="movie.mp4" type="video/mp4">
+			  <source src="movie.ogg" type="video/ogg">
+			  Your browser does not support HTML video.
+			</video>
+		</div>
+	
+		<script type="text/javascript">
+			const audio = new Audio();
+			audio.src = "./click.mp3";
+		</script>
+		<script>
+		var Player1 = "";
+		var Player2 = "";
+		var click = 0;
+		function AssignValues(field)
+		{
+			if(click%2 == 0)
+			{
+				field.innerHTML = "X";
+				field.disabled = true;
+			}
+			else
+			{
+				field.innerHTML = "O";
+				field.disabled = true;
+			}
+			click++;
+			GameFunctionality();
+		}
+		function GameFunctionality()
+		{
+			var i = 0;
+			var j = 0;
+			var num1;
+			var num2;
+			var num3;
+				const collection = document.getElementsByClassName("num");
+				if(collection[0].innerHTML == collection[1].innerHTML && collection[1].innerHTML == collection[2].innerHTML 
+				&& collection[0].innerHTML != "-")
+				{
+					num1 = 0;
+					num2 = 1;
+					num3 = 2;
+				}
+				else if(collection[3].innerHTML == collection[4].innerHTML && collection[4].innerHTML == collection[5].innerHTML 
+				&& collection[3].innerHTML != "-")
+				{
+					num1 = 3;
+					num2 = 4;
+					num3 = 5;
+				}
+				else if(collection[6].innerHTML == collection[7].innerHTML && collection[7].innerHTML == collection[8].innerHTML 
+				&& collection[6].innerHTML != "-")
+				{
+					num1 = 6;
+					num2 = 7;
+					num3 = 8;
+				}
+				else if(collection[0].innerHTML == collection[3].innerHTML && collection[3].innerHTML == collection[6].innerHTML 
+				&& collection[0].innerHTML != "-")
+				{
+					num1 = 0;
+					num2 = 3;
+					num3 = 6;
+				}
+				else if(collection[1].innerHTML == collection[4].innerHTML && collection[4].innerHTML == collection[7].innerHTML 
+				&& collection[1].innerHTML != "-")
+				{
+					num1 = 1;
+					num2 = 4;
+					num3 = 7;
+				}
+				else if(collection[2].innerHTML == collection[5].innerHTML && collection[5].innerHTML == collection[8].innerHTML 
+				&& collection[2].innerHTML != "-")
+				{
+					num1 = 2;
+					num2 = 5;
+					num3 = 8;
+				}
+				else if(collection[0].innerHTML == collection[4].innerHTML && collection[4].innerHTML == collection[8].innerHTML 
+				&& collection[0].innerHTML != "-")
+				{
+					num1 = 0;
+					num2 = 4;
+					num3 = 8;
+				}
+				else if(collection[2].innerHTML == collection[4].innerHTML && collection[4].innerHTML == collection[6].innerHTML 
+				&& collection[2].innerHTML != "-")
+				{
+					num1 = 2;
+					num2 = 4;
+					num3 = 6;
+				}
+				else if(click == 9)
+				{
+					document.getElementById("p1").innerHTML = "Match Draw!<br><br>";
+					document.getElementById("p1").style.textAlign = "center";
+					document.getElementById("p1").style.marginLeft = "-890px";
+					for(i; i<9; i++)
+					{
+						collection[i].style.color = "#D11919 ";
+					}
+				}
+					collection[num1].style.color = "#28CB72 ";
+					collection[num2].style.color = "#28CB72 ";
+					collection[num3].style.color = "#28CB72 ";
+					if(collection[num1].innerHTML == "X")
+					{
+						var myVideo = document.getElementById("video1"); 
+						myVideo.style.visibility = 'visible';
+						document.getElementById("p1").innerHTML = "Player1 <br> Win the game!";
+						document.getElementById("p1").style.textAlign = "center";
+						document.getElementById("p1").style.marginLeft = "-890px";
+					}
+					else
+					{
+						var myVideo = document.getElementById("video1"); 
+						myVideo.style.visibility = 'visible';
+						document.getElementById("p1").innerHTML = "Player2 <br> Win the game!";
+						document.getElementById("p1").style.textAlign = "center";
+						document.getElementById("p1").style.marginLeft = "-890px";
+					}
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ekko Lightbox -->
+  <link rel="stylesheet" href="plugins/ekko-lightbox/ekko-lightbox.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge badge-primary navbar-badge">3</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-sign-out-alt"
+              style="font-size:26px"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="../index3.html" class="brand-link">
+        <img src="dist/img/bakery.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">Bakery</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="dist/img/userLogo.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Muntazer</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Main Menu
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  My Orders
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Settings
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="widgets.html" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Logout
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-1">
+            <div class="col-lg-9">
+              <h1>All Items</h1>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <select class="select2" style="width: 100%;">
+                  <option selected>Sort By: Featured</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Newest Arrival</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section> <!-- /.content -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              <form action="simple-results.html">
+                <div class="input-group">
+                  <input type="search" class="form-control form-control-lg" placeholder="Enter Search String">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-lg btn-default">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br><br>
+      <div class="row">
+        <div class="col-lg-3">
+          <!-- USERS LIST -->
+          <div class="card" style="margin-left: 20px;">
+            <div class="card-header">
+              <h3 class="card-title">Choco Cake</h3>
+              <span class="color-dark" style="padding-left: 120px;"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <img class="img-fluid pad" src="dist/img/chocoCake.jpg" style="width: 400px; height: 250px;">
+              <br>
+              <strong><span>Its Choco Cake</span></strong>
+              <!-- /.users-list -->
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer text-center">
+              <div class="row">
+                <div class="col">
+                  <strong><span>550</span></strong>
+                  <span>PRICE</span>
+                </div>
+                <div class="col">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="col">
+                  <strong><span>100</span></strong>
+                  <span>STOCK</span>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-footer -->
+          </div>
+          <!--/.card -->
+        </div>
+        <div class="col-lg-3">
+          <!-- USERS LIST -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Deal 1</h3>
+              <span class="color-dark" style="padding-left: 160px;"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <img class="img-fluid pad" src="dist/img/sandwich.jpg" style="width: 400px; height: 250px;">
+              <br>
+              <strong><span>Its Sandwich</span></strong>
+              <!-- /.users-list -->
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer text-center">
+              <div class="row">
+                <div class="col">
+                  <strong><span>1000</span></strong>
+                  <span>PRICE</span>
+                </div>
+                <div class="col">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="col">
+                  <strong><span>100</span></strong>
+                  <span>STOCK</span>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-footer -->
+          </div>
+          <!--/.card -->
+        </div>
+        <div class="col-lg-3">
+          <!-- USERS LIST -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Pizza</h3>
+              <span class="color-dark" style="padding-left: 170px;"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <img class="img-fluid pad" src="dist/img/pizza.jpg" style="width: 400px; height: 250px;">
+              <br>
+              <strong><span>Its Pizza</span></strong>
+              <!-- /.users-list -->
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer text-center">
+              <div class="row">
+                <div class="col">
+                  <strong><span>1000</span></strong>
+                  <span>PRICE</span>
+                </div>
+                <div class="col">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="col">
+                  <strong><span>26</span></strong>
+                  <span>STOCK</span>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-footer -->
+          </div>
+          <!--/.card -->
+        </div>
+        <div class="col-lg-3">
+          <!-- USERS LIST -->
+          <div class="card" style="margin-right: 20px;">
+            <div class="card-header">
+              <h3 class="card-title">Chicken Roll</h3>
+              <span class="color-dark" style="padding-left: 110px;"><i class="fas fa-shopping-cart"></i></span>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <img class="img-fluid pad" src="dist/img/chickenRoll.jpg" style="width: 400px; height: 250px;">
+              <br>
+              <strong><span>Its Chicked Roll</span></strong>
+              <!-- /.users-list -->
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer text-center">
+              <div class="row">
+                <div class="col">
+                  <strong><span>1000</span></strong>
+                  <span>PRICE</span>
+                </div>
+                <div class="col">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div class="col">
+                  <strong><span>100</span></strong>
+                  <span>STOCK</span>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-footer -->
+          </div>
+          <!--/.card -->
+        </div>
+      </div>
+    </div>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Ekko Lightbox -->
+  <script src="../plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../dist/js/adminlte.min.js"></script>
+  <!-- Filterizr-->
+  <script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../dist/js/demo.js"></script>
+  <!-- Page specific script -->
+  <script>
+    $(function () {
+      $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+          alwaysShowClose: true
+        });
+      });
+
+      $('.filter-container').filterizr({ gutterPixels: 3 });
+      $('.btn[data-filter]').on('click', function () {
+        $('.btn[data-filter]').removeClass('active');
+        $(this).addClass('active');
+      });
+    })
+  </script>
+</body>
+
+</html>

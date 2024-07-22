@@ -1,0 +1,13 @@
+#form {
+    border: 1px solid grey;
+    border-radius: 5px;
+    background: #FAFAFA;
+}
+
+#content {
+    list-style-image: url('./tick.svg');
+}
+
+a {
+    text-decoration: none;
+}

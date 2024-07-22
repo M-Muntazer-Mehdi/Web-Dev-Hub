@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="Blinking_Font.css">
+
+</head>
+
+<style>
+			body{
+			background:black;
+			margin-top:20px;
+			}
+			
+			.main
+			{
+			margin-left:440px;
+			}
+			
+			.Bonus,.lost,.win{
+			margin-top:-320px;
+			margin-left:70px;
+			animation: glitch 1s linear infinite;
+			}
+
+			@keyframes glitch{
+			  2%,64%{
+				transform: translate(2px,0) skew(0deg);
+			  }
+			  4%,60%{
+				transform: translate(-2px,0) skew(0deg);
+			  }
+			  62%{
+				transform: translate(0,0) skew(5deg); 
+			  }
+			}
+			
+			.lost{
+			margin-top:-100px;
+			margin-left:100px;
+			}
+			
+			.win{
+			margin-top:-90px;
+			}
+			
+			.btn {
+			background: transparent;
+			color:white;
+			border-style: none;
+			border-color: white;
+			font-size: 13px;
+			text-align:center;
+			cursor: pointer;
+			width:40px;
+			height:40px;
+			}
+			
+			.btnbor1{
+			border-style: solid none none solid;
+			border-color: white;
+			}
+			
+			.btnbor{
+			border-style: solid none none none;
+			border-color: white;
+			}
+			
+			.btnbor2{
+			border-style: solid solid none none;
+			border-color: white;
+			}
+			
+			.btnbor3{
+			border-style: none none none solid;
+			border-color: white;
+			}
+			
+			.btnbor4{
+			border-style: none solid none none;
+			border-color: white;
+			}
+			
+			.btnbor5{
+			border-style: none none solid solid;
+			border-color: white;
+			}
+			
+			.btnbor6{
+			border-style: none none solid none;
+			border-color: white;
+			}
+			
+			.btnbor7{
+			border-style: none solid solid none;
+			border-color: white;
+			}
+			
+			.fa-user{
+			color:#FFEF00;
+			}
+
+
+</style>
+
+<body>
+	    <div class="sign">
+			<span class="fast-flicker">Pac</span>Man<span class="flicker">Game</span>
+		</div>
+
+<div class = "main">
+
+	<button id="bt1" class="btn btnbor1"><i id="bti1" class="fa fa-user" ></i></button>
+	<button id="bt2" class="btn btnbor"><i id="bti2" class="fa fa-circle-o" ></i></button>
+	<button id="bt3" class="btn btnbor"><i id="bti3" class="fa fa-circle-o" ></i></button>
+	<button id="bt4" class="btn btnbor"><i id="bti4" class="fa fa-circle-o" ></i></button>
+	<button id="bt5" class="btn btnbor"><i id="bti5" class="fa fa-circle-o" ></i></button>
+	<button id="bt6" class="btn btnbor"><i id="bti6" class="fa fa-circle-o" ></i></button>
+	<button id="bt7" class="btn btnbor"><i id="bti7" class="fa fa-circle-o" ></i></button>
+	<button id="bt8" class="btn btnbor"><i id="bti8" class="fa fa-circle-o" ></i></button>
+	<button id="bt9" class="btn btnbor"><i id="bti9" class="fa fa-circle-o" ></i></button>
+	<button id="bt10" class="btn btnbor2"><i id="bti10" class="fa fa-circle-o" ></i></button>
+
+	<br />
+
+	<button id="bt11" class="btn btnbor3"><i id="bti11" class="fa fa-circle-o" ></i></button>
+	<button id="bt12" class="btn"><i id="bti12" class="fa fa-circle-o" ></i></button>
+	<button id="bt13" class="btn"><i id="bti13" class="fa fa-circle-o" ></i></button>
+	<button id="bt14" class="btn"><i id="bti14" class="fa fa-circle-o" ></i></button>
+	<button id="bt15" class="btn"><i id="bti15" class="fa fa-circle-o" ></i></button>
+	<button id="bt16" class="btn"><i id="bti16" class="fa fa-circle-o" ></i></button>
+	<button id="bt17" class="btn"><i id="bti17" class="fa fa-circle-o" ></i></button>
+	<button id="bt18" class="btn"><i id="bti18" class="fa fa-circle-o" ></i></button>
+	<button id="bt19" class="btn"><i id="bti19" class="fa fa-circle-o" ></i></button>
+	<button id="bt20" class="btn btnbor4"><i id="bti20" class="fa fa-circle-o" ></i></button>
+
+
+	<br />
+
+	<button id="bt21" class="btn btnbor3"><i id="bti21" class="fa fa-circle-o" ></i></button>
+	<button id="bt22" class="btn"><i id="bti22" class="fa fa-circle-o" ></i></button>
+	<button id="bt23" class="btn"><i id="bti23" class="fa fa-circle-o" ></i></button>
+	<button id="bt24" class="btn"><i id="bti24" class="fa fa-circle-o" ></i></button>
+	<button id="bt25" class="btn"><i id="bti25" class="fa fa-circle-o" ></i></button>
+	<button id="bt26" class="btn"><i id="bti26" class="fa fa-circle-o" ></i></button>
+	<button id="bt27" class="btn"><i id="bti27" class="fa fa-circle-o" ></i></button>
+	<button id="bt28" class="btn"><i id="bti28" class="fa fa-circle-o" ></i></button>
+	<button id="bt29" class="btn"><i id="bti29" class="fa fa-circle-o" ></i></button>
+	<button id="bt30" class="btn btnbor4"><i id="bti30" class="fa fa-circle-o" ></i></button>
+
+	<br />
+
+	<button id="bt31" class="btn btnbor3"><i id="bti31" class="fa fa-circle-o" ></i></button>
+	<button id="bt32" class="btn"><i id="bti32" class="fa fa-circle-o" ></i></button>
+	<button id="bt33" class="btn"><i id="bti33" class="fa fa-circle-o" ></i></button>
+	<button id="bt34" class="btn"><i id="bti34" class="fa fa-circle-o" ></i></button>
+	<button id="bt35" class="btn"><i id="bti35" class="fa fa-circle-o" ></i></button>
+	<button id="bt36" class="btn"><i id="bti36" class="fa fa-circle-o" ></i></button>
+	<button id="bt37" class="btn"><i id="bti37" class="fa fa-circle-o" ></i></button>
+	<button id="bt38" class="btn"><i id="bti38" class="fa fa-circle-o" ></i></button>
+	<button id="bt39" class="btn"><i id="bti39" class="fa fa-circle-o" ></i></button>
+	<button id="bt40" class="btn btnbor4"><i id="bti40" class="fa fa-circle-o" ></i></button>
+
+
+	<br />
+	<button id="bt41" class="btn btnbor3"><i id="bti41" class="fa fa-circle-o" ></i></button>
+	<button id="bt42" class="btn"><i id="bti42" class="fa fa-circle-o" ></i></button>
+	<button id="bt43" class="btn"><i id="bti43" class="fa fa-circle-o" ></i></button>
+	<button id="bt44" class="btn"><i id="bti44" class="fa fa-circle-o" ></i></button>
+	<button id="bt45" class="btn"><i id="bti45" class="fa fa-circle-o" ></i></button>
+	<button id="bt46" class="btn"><i id="bti46" class="fa fa-circle-o" ></i></button>
+	<button id="bt47" class="btn"><i id="bti47" class="fa fa-circle-o" ></i></button>
+	<button id="bt48" class="btn"><i id="bti48" class="fa fa-circle-o" ></i></button>
+	<button id="bt49" class="btn"><i id="bti49" class="fa fa-circle-o" ></i></button>
+	<button id="bt50" class="btn btnbor4"><i id="bti50" class="fa fa-circle-o" ></i></button>
+
+
+	<br />
+	<button id="bt51" class="btn btnbor3"><i id="bti51" class="fa fa-circle-o" ></i></button>
+	<button id="bt52" class="btn"><i id="bti52" class="fa fa-circle-o" ></i></button>
+	<button id="bt53" class="btn"><i id="bti53" class="fa fa-circle-o" ></i></button>
+	<button id="bt54" class="btn"><i id="bti54" class="fa fa-circle-o" ></i></button>
+	<button id="bt55" class="btn"><i id="bti55" class="fa fa-circle-o" ></i></button>
+	<button id="bt56" class="btn"><i id="bti56" class="fa fa-circle-o" ></i></button>
+	<button id="bt57" class="btn"><i id="bti57" class="fa fa-circle-o" ></i></button>
+	<button id="bt58" class="btn"><i id="bti58" class="fa fa-circle-o" ></i></button>
+	<button id="bt59" class="btn"><i id="bti59" class="fa fa-circle-o" ></i></button>
+	<button id="bt60" class="btn btnbor4"><i id="bti60" class="fa fa-circle-o" ></i></button>
+
+
+	<br />
+	<button id="bt61" class="btn btnbor3"><i id="bti61" class="fa fa-circle-o" ></i></button>
+	<button id="bt62" class="btn"><i id="bti62" class="fa fa-circle-o" ></i></button>
+	<button id="bt63" class="btn"><i id="bti63" class="fa fa-circle-o" ></i></button>
+	<button id="bt64" class="btn"><i id="bti64" class="fa fa-circle-o" ></i></button>
+	<button id="bt65" class="btn"><i id="bti65" class="fa fa-circle-o" ></i></button>
+	<button id="bt66" class="btn"><i id="bti66" class="fa fa-circle-o" ></i></button>
+	<button id="bt67" class="btn"><i id="bti67" class="fa fa-circle-o" ></i></button>
+	<button id="bt68" class="btn"><i id="bti68" class="fa fa-circle-o" ></i></button>
+	<button id="bt69" class="btn"><i id="bti69" class="fa fa-circle-o" ></i></button>
+	<button id="bt70" class="btn btnbor4"><i id="bti70" class="fa fa-circle-o" ></i></button>
+
+
+	<br />
+	<button id="bt71" class="btn btnbor3"><i id="bti71" class="fa fa-circle-o" ></i></button>
+	<button id="bt72" class="btn"><i id="bti72" class="fa fa-circle-o" ></i></button>
+	<button id="bt73" class="btn"><i id="bti73" class="fa fa-circle-o" ></i></button>
+	<button id="bt74" class="btn"><i id="bti74" class="fa fa-circle-o" ></i></button>
+	<button id="bt75" class="btn"><i id="bti75" class="fa fa-circle-o" ></i></button>
+	<button id="bt76" class="btn"><i id="bti76" class="fa fa-circle-o" ></i></button>
+	<button id="bt77" class="btn"><i id="bti77" class="fa fa-circle-o" ></i></button>
+	<button id="bt78" class="btn"><i id="bti78" class="fa fa-circle-o" ></i></button>
+	<button id="bt79" class="btn"><i id="bti79" class="fa fa-circle-o" ></i></button>
+	<button id="bt80" class="btn btnbor4"><i id="bti80" class="fa fa-circle-o" ></i></button>
+
+
+	<br />
+	<button id="bt81" class="btn btnbor3"><i id="bti81" class="fa fa-circle-o" ></i></button>
+	<button id="bt82" class="btn"><i id="bti82" class="fa fa-circle-o" ></i></button>
+	<button id="bt83" class="btn"><i id="bti83" class="fa fa-circle-o" ></i></button>
+	<button id="bt84" class="btn"><i id="bti84" class="fa fa-circle-o" ></i></button>
+	<button id="bt85" class="btn"><i id="bti85" class="fa fa-circle-o" ></i></button>
+	<button id="bt86" class="btn"><i id="bti86" class="fa fa-circle-o" ></i></button>
+	<button id="bt87" class="btn"><i id="bti87" class="fa fa-circle-o" ></i></button>
+	<button id="bt88" class="btn"><i id="bti88" class="fa fa-circle-o" ></i></button>
+	<button id="bt89" class="btn"><i id="bti89" class="fa fa-circle-o" ></i></button>
+	<button id="bt90" class="btn btnbor4"><i id="bti90" class="fa fa-circle-o" ></i></button>
+
+
+	<br />
+	<button id="bt91" class="btn btnbor5"><i id="bti91" class="fa fa-circle-o" ></i></button>
+	<button id="bt92" class="btn btnbor6"><i id="bti92" class="fa fa-circle-o" ></i></button>
+	<button id="bt93" class="btn btnbor6"><i id="bti93" class="fa fa-circle-o" ></i></button>
+	<button id="bt94" class="btn btnbor6"><i id="bti94" class="fa fa-circle-o" ></i></button>
+	<button id="bt95" class="btn btnbor6"><i id="bti95" class="fa fa-circle-o" ></i></button>
+	<button id="bt96" class="btn btnbor6"><i id="bti96" class="fa fa-circle-o" ></i></button>
+	<button id="bt97" class="btn btnbor6"><i id="bti97" class="fa fa-circle-o" ></i></button>
+	<button id="bt98" class="btn btnbor6"><i id="bti98" class="fa fa-circle-o" ></i></button>
+	<button id="bt99" class="btn btnbor6"><i id="bti99" class="fa fa-circle-o" ></i></button>
+	<button id="bt100" class="btn btnbor7"><i id="bti100" class="fa fa-circle-o" ></i></button>
+
+</div>
+
+<div class = "Bonus">
+<p id="winPlayer" style="font-size:40px; visibility:hidden; color:white;">You Get Bonus!</p>
+</div>
+
+<div class = "lost">
+<p id="lostPlayer" style="font-size:40px; visibility:hidden; color:white;">You lost ☹️!</p>
+</div>
+
+<div class = "win">
+<p id="winPlayer1" style="font-size:40px; visibility:hidden; color:white;">You win 😀!</p>
+</div>
+
+
+		<script type="text/javascript">
+			const audio = new Audio();
+			audio.src = "./click.mp3";
+		</script>
+
+<script>
+
+var random = Math.floor(Math.random() * 100);
+
+var random1 = [];
+var random2 = [];
+var random3 = [];
+var random4 = [];
+ for(var i = 0; i < 25;i++)
+ {
+ 	var val = Math.floor(Math.random() * 100);
+	if(val != random && val != 1 && val != 2 && val != 11)
+	{
+		random2[Math.floor(i)] = "bti"+val;
+		random1[Math.floor(i)] = "bt"+val;
+		document.getElementById(random1[i]).style.color = "#FF0000";
+	}
+ }
+ 
+ for(var i = 0; i < 9;i++)
+ {
+ 	var val1 = Math.floor(Math.random() * 100);
+	for(var j = 0; j < 15;j++)
+	{
+		var var1_check = "bt"+val1;
+		if(val1 != random && var1_check != random1[j])
+		{
+			random4[Math.floor(i)] = "bti"+val1;
+			random3[Math.floor(i)] = "bt"+val1;
+			document.getElementById(random3[i]).style.color = "#1BFF00";
+		}
+	}
+ }
+ 
+ 
+
+var iconid = "bti"+random;
+document.getElementById(iconid).className = "fa fa-home";
+var iconbutton_id = "bt"+random;
+document.getElementById(iconbutton_id).style.color = "#FF00B2 ";
+
+function hide()
+{
+	document.getElementById("winPlayer").style.visibility = "hidden";
+}
+
+function show()
+{
+	document.getElementById("winPlayer").style.visibility = "visible";
+}
+
+function hidelost()
+{
+	document.getElementById("lostPlayer").style.visibility = "hidden";
+					alert("You lost!");
+				location.reload();
+}
+
+function showlost()
+{
+	document.getElementById("lostPlayer").style.visibility = "visible";
+}
+
+function hidewin()
+{
+	document.getElementById("winPlayer1").style.visibility = "hidden";
+				alert("User Win!");
+			location.reload();
+}
+
+function showwin()
+{
+	document.getElementById("winPlayer1").style.visibility = "visible";
+}
+
+function myfun() {
+
+alert("Hello");
+
+document.getElementById("button1").innerHTML  = "Hello";
+
+document.getElementById("button1").style.color  = 'blue';
+
+document.getElementById("winPlayer").innerHTML  = "Player 1 Wins";
+
+}
+
+var count = 1;
+document.onkeyup = function(e) {
+audio.play();
+if(e.keyCode == 37)
+{
+	var button5_id = "bti"+count;
+	document.getElementById(button5_id).className = "fa fa-circle-o";
+	if(count>1)
+	{
+		var button6_id = "bti"+(count-1);
+		document.getElementById(button6_id).className = "fa fa-user";
+		if(button6_id == iconid)
+		{
+			setTimeout("showwin()", 100);			
+			setTimeout("hidewin()", 2000);
+		}
+		 for(var i = 0; i < 25;i++)
+		 {
+			if(button6_id == random2[i])
+			{
+				setTimeout("showlost()", 100);			
+				setTimeout("hidelost()", 2000);
+			}
+		 }
+		 for(var i = 0; i < 9;i++)
+		 {
+			if(button6_id == random4[i])
+			{
+				setTimeout("show()", 100);			
+				setTimeout("hide()", 2000);
+			}
+		 }
+		count--;
+	}
+	else{
+		var button6_id = "bti"+(count);
+		document.getElementById(button6_id).className = "fa fa-user";
+	}
+}
+
+if(e.keyCode == 39)
+{
+	var button_id = "bti"+count;
+	document.getElementById(button_id).className = "fa fa-circle-o";
+	if(count < 100)
+	{
+		var button2_id = "bti"+(count+1);
+		document.getElementById(button2_id).className = "fa fa-user";
+		if(button2_id == iconid)
+		{
+			setTimeout("showwin()", 100);			
+			setTimeout("hidewin()", 2000);
+		}
+		for(var i = 0; i < 25;i++)
+		 {
+			if(button2_id == random2[i])
+			{
+				setTimeout("showlost()", 100);			
+				setTimeout("hidelost()", 2000);
+			}
+		 }
+		 for(var i = 0; i < 9;i++)
+		 {
+			if(button2_id == random4[i])
+			{
+				setTimeout("show()", 100);			
+				setTimeout("hide()", 2000);
+			}
+		 }
+		count++;
+	}
+	else
+	{
+		var button2_id = "bti"+(count);
+		document.getElementById(button2_id).className = "fa fa-user";
+	}
+}
+
+if(e.keyCode == 38)
+{
+	var button7_id = "bti"+count;
+	document.getElementById(button7_id).className = "fa fa-circle-o";
+	count = count-10;
+		if(count >= 1)
+		{
+			var button8_id = "bti"+count;
+			document.getElementById(button8_id).className = "fa fa-user";
+			if(button8_id == iconid)
+			{
+			setTimeout("showwin()", 100);			
+			setTimeout("hidewin()", 2000);
+			}
+			for(var i = 0; i < 25;i++)
+			 {
+				if(button8_id == random2[i])
+				{
+				setTimeout("showlost()", 100);			
+				setTimeout("hidelost()", 2000);
+				}
+			 }
+			for(var i = 0; i < 9;i++)
+			 {
+				if(button8_id == random4[i])
+				{
+				setTimeout("show()", 100);			
+				setTimeout("hide()", 2000);
+				}
+			 }
+		}
+		else{
+			count = count + 10;
+						var button8_id = "bti"+count;
+			document.getElementById(button8_id).className = "fa fa-user";
+		}
+}
+
+if(e.keyCode == 40)
+{
+	var button3_id = "bti"+count;
+	document.getElementById(button3_id).className = "fa fa-circle-o";
+	count = count+10;
+	if(count <= 100)
+	{
+		var button4_id = "bti"+count;
+		document.getElementById(button4_id).className = "fa fa-user";
+		if(button4_id == iconid)
+		{
+			setTimeout("showwin()", 100);			
+			setTimeout("hidewin()", 2000);
+		}
+		for(var i = 0; i < 25;i++)
+		 {
+			if(button4_id == random2[i])
+			{
+				setTimeout("showlost()", 100);			
+				setTimeout("hidelost()", 2000);
+			}
+		 }
+		 for(var i = 0; i < 9;i++)
+		 {
+			if(button4_id == random4[i])
+			{
+				setTimeout("show()", 100);			
+				setTimeout("hide()", 2000);
+			}
+		 }
+	}
+	else{
+		count = count-10;
+		var button4_id = "bti"+count;
+		document.getElementById(button4_id).className = "fa fa-user";
+	}
+}
+
+}
+
+
+</script>
+
+</body>
+</html>
