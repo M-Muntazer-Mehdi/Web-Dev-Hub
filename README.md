@@ -113,10 +113,10 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/x54kw7Y/login1.png" alt="login1" border="0" width="450" height="300">
+     <img src="https://i.postimg.cc/d0ZhTZy9/por1.png" border="0" width="450" height="300">
     </td>
     <td align="center">
-     <img src="https://i.ibb.co/BP6mZ57/login2.png" alt="login2" border="0" width="450" height="300">
+     <img src="https://i.postimg.cc/8k6xnphn/por2.png" border="0" width="450" height="300">
     </td>
   </tr>
 </table>
