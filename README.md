@@ -11,7 +11,7 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/b5k8rHJ/keyboard.png" alt="keyboard" border="0" width="600" height="400">
+     <img src="https://i.ibb.co/b5k8rHJ/keyboard.png" border="0" width="600" height="400">
     </td>
   </tr>
 </table>
@@ -24,7 +24,7 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/jHfFHPN/tic-tac-toe.png" alt="tic-tac-toe" border="0" width="500" height="400">
+     <img src="https://i.ibb.co/jHfFHPN/tic-tac-toe.png" border="0" width="500" height="400">
     </td>
   </tr>
 </table>
@@ -37,7 +37,7 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/JB4Kk33/pac-man.png" alt="pac-man" border="0" width="500" height="400">
+     <img src="https://i.ibb.co/JB4Kk33/pac-man.png" border="0" width="500" height="400">
     </td>
   </tr>
 </table>
@@ -51,7 +51,7 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/CnGbSSC/admin-lte.png" alt="admin-lte" border="0" width="650" height="400">
+     <img src="https://i.ibb.co/CnGbSSC/admin-lte.png" border="0" width="650" height="400">
     </td>
   </tr>
 </table>
@@ -66,10 +66,10 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/1MzhG7G/ui1.png" alt="ui1" border="0" width="450" height="300">
+     <img src="https://i.ibb.co/1MzhG7G/ui1.png"  border="0" width="450" height="300">
     </td>
     <td align="center">
-     <img src="https://i.ibb.co/bmdMzB0/ui2.png" alt="ui2" border="0" width="450" height="300">
+     <img src="https://i.ibb.co/bmdMzB0/ui2.png" border="0" width="450" height="300">
     </td>
   </tr>
 </table>
@@ -82,7 +82,7 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/4tvT9Mz/map.png" alt="map" border="0" width="650" height="400">
+     <img src="https://i.ibb.co/4tvT9Mz/map.png" border="0" width="650" height="400">
     </td>
   </tr>
 </table>
@@ -94,10 +94,10 @@ Welcome to the Web Dev Hub repository! This repository contains a variety of web
 <table align="center">
   <tr>
     <td align="center">
-     <img src="https://i.ibb.co/x54kw7Y/login1.png" alt="login1" border="0" width="450" height="300">
+     <img src="https://i.ibb.co/x54kw7Y/login1.png" border="0" width="450" height="300">
     </td>
     <td align="center">
-     <img src="https://i.ibb.co/BP6mZ57/login2.png" alt="login2" border="0" width="450" height="300">
+     <img src="https://i.ibb.co/BP6mZ57/login2.png" border="0" width="450" height="300">
     </td>
   </tr>
 </table>
